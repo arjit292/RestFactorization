@@ -1,12 +1,9 @@
-package com.factor.config;
+package com.factor.server.config;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.yammer.dropwizard.config.Configuration;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,16 +17,11 @@ public class FactorConfiguration extends Configuration {
     @JsonProperty
     private String defaultName = "Stranger";
 
-    @Valid
-    @NotNull
-    @JsonProperty
-    private int port = 0;
+
 
     public String getDefaultName() {
         return defaultName;
     }
 
-    public int getPort() {
-        return port;
-    }
+
 }
